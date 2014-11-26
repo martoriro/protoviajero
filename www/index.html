@@ -25,10 +25,12 @@
 
     <ion-pane>
       <ion-header-bar class="bar-stable">
-        <h1 class="title">Pentaaaa</h1>
+        <h1 class="title">Viajero!</h1>
       </ion-header-bar>
-      <ion-content>
-      </ion-content>
+      <ion-content ng-controller="MapController">
+        <div id="map" data-tap-disabled="true"></div>
+    </ion-content>
     </ion-pane>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
   </body>
 </html>
