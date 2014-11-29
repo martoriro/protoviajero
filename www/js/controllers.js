@@ -21,7 +21,7 @@ angular.module('starter.controllers',[])
 
 	var mapOptions = {
 		center: new google.maps.LatLng(-33.4500, -70.6667),
-          zoom: 10,
+          zoom: 8,
           mapTypeControlOptions: {
       		mapTypeIds: [google.maps.MapTypeId.ROADMAP, MY_MAPTYPE_ID]
     		},
