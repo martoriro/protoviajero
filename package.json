@@ -1,7 +1,7 @@
 {
-  "name": "protoviajero",
+  "name": "viajero!",
   "version": "1.0.0",
-  "description": "protoviajero: An Ionic project",
+  "description": "Viajero!: An Ionic project",
   "dependencies": {
     "gulp": "^3.5.6",
     "gulp-sass": "^0.7.1",
