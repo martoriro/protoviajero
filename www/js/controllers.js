@@ -1,13 +1,12 @@
-angular.module('starter.controllers',[])
+angular.module('starter.controllers', ['ionic'])
 
 .controller('AppCtrl', function($scope) {
 })
 
 .controller('HomeCtrl', function($scope){
-
 }) 
 
-.controller("MapController", function($scope){
+.controller("MapController", function($scope, $state){
 	var MY_MAPTYPE_ID = 'custom_style';
 
 	var featureOpts = [{
@@ -45,6 +44,10 @@ angular.module('starter.controllers',[])
       icon: 'img/botella.png',
       title: 'Lugar 1'
   	});
+
+    google.maps.event.addListener(marker, 'click', function(){
+      $state.go('app.login');
+    });
 
 	map.mapTypes.set(MY_MAPTYPE_ID, customMapType);
 
