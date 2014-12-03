@@ -23,4 +23,19 @@ angular.module('starter.services', [])
       return friends[friendId];
     }
   }
+})
+
+.factory('Organizations', function(){
+  var organizations =[{id: 0, name:"organización 1", calificacion: 5,
+                     logo:"url/img", video: "url/video", 
+                     mensajePresentacion: "ejemplo de mensaje de presentacion",
+                     servicios:["serv1", "serv2"]  }];
+  return {
+    all:function(){
+      return organizations;
+    },
+    get: function(organizationId){
+      return organizations[organizationId];
+    }
+  }
 });

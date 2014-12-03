@@ -5,8 +5,11 @@ angular.module('starter.controllers', ['ionic'])
 
 .controller('HomeCtrl', function($scope){
 }) 
-
 .controller('AlojamientoCtrl', function($scope) {
+  
+})
+.controller('AlojamientoHomeCtrl', function($scope, $stateParams, Organizations) {
+  $scope.organizations= Organizations.get($stateParams.organizationId);
 })
 
 /*.controller('ContactoCtrl', function($scope) {

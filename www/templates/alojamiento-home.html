@@ -2,9 +2,10 @@
   <ion-content class="padding">
     <div class="list card">
     	<div class="item item-avatar">
-    	    <img src="../img/ionic.png">
-    	    <h2>Nombre de la organización</h2>
-    	    <p>Lema de la organización clasificación actual</p>
+    	    <img src="{{organizations.logo}}">
+            
+    	    <h2>{{organizations.name}}</h2>
+    	    <p>{{organizations.calificacion}}</p>
     	</div>
     	<div class="item item-body">
     		<div class="row">
@@ -37,10 +38,11 @@
     		</div>    		
     	</div>    
     	<div class="item item-body">
-    		<p>Mensaje de presentación de la organización que se publicita, acá podrá expresar sus sentimientos hacia el usuario que posee la grandiosa aplicación de viajero. Este texto se debe ver justificado</p>
+    		<p>{{organizations.mensajePresentacion}}</p>
     	</div>
     	<div class="item item-divider">
     		Servicios
+            {{organizations.servicios[0]}}
     		<p>servicio 1, servicio 2, servicio 3
   		</div>
 	</div>
