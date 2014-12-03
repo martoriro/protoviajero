@@ -31,7 +31,7 @@ angular.module('starter.controllers', ['ionic'])
 
 	var featureOpts = [{
     stylers: [
-      { hue: '#222222' },
+      { hue: '#8d9aff' },
       { visibility: 'simplified' },
       { gamma: 0.5 },
       { weight: 0.5 }
