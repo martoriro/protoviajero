@@ -26,7 +26,7 @@ angular.module('starter.services', [])
 })
 
 .factory('Organizations', function(){
-  var organizations =[{id: 0, name:"organización 1", calificacion: 5, logo:"url/img",imgOrganizacion:["img/organization/images/pres00.jpg", "url2","url3","url4", "url5"], video: "url/video", mensajePresentacion: "ejemplo de mensaje de presentacion", servicioPrin:"holo", serviciosSec:["serv1", "serv2"]}];
+  var organizations =[{id: 0, name:"Hotel Boutique Castillo Rojo", calificacion: 5, logo:"img/organization/logos/0.png",imgOrganizacion:["img/organization/images/pres00.png", "img/organization/images/pres01.png"], video: "url/video", mensajePresentacion: "ejemplo de mensaje de presentacion", servicioPrin:"holo", serviciosSec:["serv1", "serv2"]}];
   return {
     all:function(){
       return organizations;
