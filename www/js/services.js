@@ -26,7 +26,7 @@ angular.module('starter.services', [])
 })
 
 .factory('Organizations', function(){
-  var organizations =[{id: 0, name:"Hotel Boutique Castillo Rojo", calificacion: 5, logo:"img/organization/logos/0.png",imgOrganizacion:["img/organization/images/pres00.png", "img/organization/images/pres01.png"], video: "url/video", mensajePresentacion: "ejemplo de mensaje de presentacion", servicioPrin:"holo", serviciosSec:["serv1", "serv2"]}];
+  var organizations =[{id: 0, name:"Hotel Boutique Castillo Rojo", calificacion: 5, logo:"img/organization/logos/0.png",imgOrganizacion:["img/organization/images/pres00.png", "img/organization/images/pres01.png"], video: "url/video", mensajePresentacion: "El Hotel Boutique Castillo Rojo ofrece alojamiento con conexión Wi-Fi gratuita y un desayuno francés gratuito en Santiago, a 15 minutos a pie del cerro de Santa Lucía y del cerro de San Cristóbal.", servicioPrin:"Alojamiento", serviciosSec:["Restaurante", "Piscina"]}];
   return {
     all:function(){
       return organizations;
