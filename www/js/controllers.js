@@ -27,18 +27,27 @@ angular.module('starter.controllers', ['ionic'])
 })
 
 .controller("MapController", function($scope, $state){
-  var x2js = new X2JS();
-  console.log(x2js.xml2json('xml/lugares.xml'));
-
 	var MY_MAPTYPE_ID = 'custom_style';
 
-	var featureOpts = [{
+	var featureOpts = [
+  {
+    featureType: 'landscape.natural',
+    elementType: 'all',
     stylers: [
-      { hue: '#8d9aff' },
+      { hue: '#fe974b' },
       { visibility: 'simplified' },
       { gamma: 0.5 },
       { weight: 0.5 }
-    ]}
+    ]
+  },
+  {
+    featureType: 'poi',
+    elementType: 'all',
+    stylers: [
+      {visibility: "off"}
+    ]
+  }
+
 	];
 
 	var mapOptions = {
@@ -61,60 +70,55 @@ angular.module('starter.controllers', ['ionic'])
 
 	var customMapType = new google.maps.StyledMapType(featureOpts, styledMapOptions);
 
-  var imageL = {
-    url: 'img/lodging.png',
-    size: 15,
-    scaledSize: 10
-  };
-
 	var marker1 = new google.maps.Marker({
     position: new google.maps.LatLng(-33.43663, -70.64445),
     map: map,
     icon:  new google.maps.MarkerImage(
       'img/lodging.png',
-      new google.maps.Size(10, 15),
+      new google.maps.Size(50, 50),
       new google.maps.Point(0, 0),
       new google.maps.Point(0, 0),
-      new google.maps.Size(10, 15)
+      new google.maps.Size(50, 50)
     ),
     title: 'Hostal y apartamentos Andes"'
 	});
-  google.maps.event.addListener(map, 'zoom_changed', function(){
-    var largo = 50 * (map.getZoom()-10);    
-    var ancho = largo / 1.42;
+  /*google.maps.event.addListener(map, 'zoom_changed', function(){
+    var saiz = 50 * (map.getZoom()-10);
     var icon = marker1.getIcon();
     console.log(icon);
     marker1.setIcon(new google.maps.MarkerImage(
             icon.url,
-            new google.maps.Size(largo,  ancho),
+            new google.maps.Size(saiz,  saiz),
             new google.maps.Point(0, 0),
             new google.maps.Point(0, 0),
-            new google.maps.Size(largo, ancho)
+            new google.maps.Size(saiz, saiz)
         ));
     console.log(icon);  
-  });
-
-  var imageD = {
-    url: 'img/diner.png',    
-    scale: 10
-  }
+  });*/
 
   var marker2 = new google.maps.Marker({
     position: new google.maps.LatLng(-33.43733, -70.64186),
     map: map,
-    icon: imageD,
+    icon:  new google.maps.MarkerImage(
+      'img/diner.png',
+      new google.maps.Size(50, 50),
+      new google.maps.Point(0, 0),
+      new google.maps.Point(0, 0),
+      new google.maps.Size(50, 50)
+    ),
     title: 'Bombón oriental"'
   });
-
-  var imageA = {
-    url: 'img/adventure.png',    
-    scale: 10
-  }
 
   var marker3 = new google.maps.Marker({
     position: new google.maps.LatLng(-33.58393, -70.39690),
     map: map,
-    icon: imageA,
+    icon:  new google.maps.MarkerImage(
+      'img/adventure.png',
+      new google.maps.Size(50, 50),
+      new google.maps.Point(0, 0),
+      new google.maps.Point(0, 0),
+      new google.maps.Size(50, 50)
+    ),
     title: 'Ruta vertical"'
   });
 
