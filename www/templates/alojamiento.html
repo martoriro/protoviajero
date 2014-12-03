@@ -1,44 +1,24 @@
-<ion-view title='<img src="../img/logoViajeroSide.png">'>
- <ion-nav-buttons side="left">
-    <button menu-toggle="left"class="button button-icon icon ion-navicon"></button>
-  </ion-nav-buttons>
-  <ion-content class="has-header ">
-    <div class="bar bar-header bar-light">
-        <h1 class="title">Iniciar sesión</h1>
-    </div>
-	<div class="list list-inset">
-	  <label class="item item-input">
-	    <input type="text" placeholder="Usuario">
-	  </label>
-	  <label class="item item-input">
-	    <input type="password" placeholder="Contraseña">
-	  </label>
-      <button class="button button-block button-light">
-        Entrar
-        </button>
-	</div>
-    <div class="row">
-        <div class="col">
-            <a class="button button-clear button-positive">
-                Crear cuenta
-            </a>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col">
-            <a class="button button-clear button-positive">
-                Ingresar con cuenta Facebook
-            </a>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col">
-            <a class="button button-clear button-positive">
-                Acceder sin iniciar sesión
-            </a>
-        </div>
-    </div>
-
-	
-  </ion-content>
-</ion-view>
+<!-- 
+  Create tabs with an icon and label, using the tabs-positive style. 
+  Each tab's child <ion-nav-view> directive will have its own 
+  navigation history that also transitions its views in and out.
+-->
+<ion-tabs class="tabs-icon-top">
+  <!-- Home -->
+  <ion-tab title="Home" icon="icon ion-home" ui-sref='alojamiento.home'>
+    <ion-nav-view name="alojamiento-home"></ion-nav-view>
+  </ion-tab>
+  <!-- Contacto -->
+  <ion-tab title="Contacto" icon="icon ion-email" ui-sref='alojamiento.contacto'>
+    <ion-nav-view name="alojamiento-contacto"></ion-nav-view>
+  </ion-tab>
+  <!-- Horarios -->
+  <ion-tab title="Horarios" icon="icon ion-clock" ui-sref='alojamiento.horarios'>
+    <ion-nav-view name="alojamiento-horarios"></ion-nav-view>
+  </ion-tab>
+  <!-- Habitaciones -->
+  <ion-tab title="Habitaciones" icon="icon ion-clipboard" ui-sref='alojamiento.habitaciones'>
+    <ion-nav-view name="alojamiento-habitaciones"></ion-nav-view>
+  </ion-tab>
+  
+</ion-tabs>
