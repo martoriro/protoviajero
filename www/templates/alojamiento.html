@@ -3,6 +3,16 @@
   Each tab's child <ion-nav-view> directive will have its own 
   navigation history that also transitions its views in and out.
 -->
+<ion-nav-bar class="bar bar-header bar-energized">
+        <ion-nav-back-button class="button-icon icon ion-ios7-arrow-back">
+                Atrás
+        </ion-nav-back-button>
+        <ion-nav-buttons side="right">
+        <button class="button-icon ion-android-close" ui-sref="app.home">
+        </button>
+ </ion-nav-buttons>
+</ion-nav-bar>
+
 <ion-tabs class="tabs-icon-top">
   <!-- Home -->
   <ion-tab title="Home" icon="icon ion-home" ui-sref='alojamiento.home'>
