@@ -37,7 +37,7 @@ angular.module('starter.services', [])
   }
 })
 
-.factory('Contact', function(){horario
+.factory('Contacts', function(){
   var contacts = [{id: 0, name:"Hotel Boutique Castillo Rojo",logo:"img/organization/logos/0.png", fonos:["02-25333221", "02-23317854"], email: "info@castillorojo.cl", web: "www.castillorojo.cl" }];
   return{
     all:function(){
