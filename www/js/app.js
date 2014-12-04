@@ -89,7 +89,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     })
 
     .state('alojamiento.habitaciones', {
-      url: '/habitaciones',
+      url: '/habitaciones/:roomId',
       views: {
         'alojamiento-habitaciones': {
           templateUrl: 'templates/alojamiento-habitaciones.html',
@@ -99,11 +99,11 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     })
 
     .state('alojamiento.habitacion-detail', {
-      url: '/habitacion/:friendId',
+      url: '/habitacion/:typeId',
       views: {
         'alojamiento-habitaciones': {
           templateUrl: 'templates/habitacion-detail.html',
-          controller: 'FriendDetailCtrl'
+          controller: 'TypeCtrl'
         }
       }
     })

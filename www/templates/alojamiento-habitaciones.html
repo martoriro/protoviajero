@@ -2,10 +2,10 @@
   <ion-content>
   	
   	<div class="list" >
-		<a class="item item-thumbnail-left" ng-repeat="friend in friends" type="item-text-wrap" href="#alojamiento/habitacion/{{friend.id}}" >
-    		<img src="../img/ionic.png">
-      		<h2>{{friend.name}}</h2>
-      		<p>Precio: $20.000 x dia</p>
+		<a class="item item-thumbnail-left" ng-repeat="room in rooms" type="item-text-wrap" href="#alojamiento/habitacion/{{room.id}}" >
+    		<img src="{{room.foto}}">
+      		<h2>{{room.name}}</h2>
+      		<p>{{room.precio}}</p>
     	</a>    	
 	</div>
     

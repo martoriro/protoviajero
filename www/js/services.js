@@ -62,7 +62,14 @@ angular.module('starter.services', [])
 })
 
 .factory('Rooms', function(){
-  var rooms = [{id:0, name: "Habitación clasica", precio: "$20.000"}];
+  var rooms = [
+    {id:0, name: "Suite presidencial", precio: "$100.000 por día", foto: "img/organization/rooms/01.png"},
+    {id:1, name: "Habitación primera clase", precio: "$60.000 por día",foto: "img/organization/rooms/02.png"},
+    {id:2, name: "Habitación clásica", precio: "$20.000 por día",foto: "img/organization/rooms/03.png"},
+    {id:3, name: "Habitación con decoraciones", precio: "$30.000 por día",foto: "img/organization/rooms/04.png"}
+  ];
+               
+               
   return{
     all:function(){
       return rooms;
@@ -73,8 +80,11 @@ angular.module('starter.services', [])
   }
 })
 
-.factory('Type', function(){
-  var types = [{id: 0, fotos: ["foto1", "foto2"], descripcion: "descripción de la habitacion"}];
+.factory('Types', function(){
+  var types = [{id: 0, name: "Suite presidencial" ,foto: ["foto1", "foto2"], descripcion: "descripción de la habitacion"},
+               {id: 1, name: "Habitación primera clase" ,foto: ["foto1", "foto2"], descripcion: "descripción de la habitacion"},
+               {id: 2, name: "Habitación clásica" ,foto: ["foto1", "foto2"], descripcion: "descripción de la habitacion"},
+               {id: 3, name: "Habitación con decoraciones" ,foto: ["foto1", "foto2"], descripcion: "descripción de la habitacion"}];
   return{
     all:function(){
       return types;

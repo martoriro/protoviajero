@@ -21,20 +21,20 @@ angular.module('starter.controllers', ['ionic'])
   $scope.contacts = Contacts.get($stateParams.contactId);
 })
 
-/*.controller('ContactoCtrl', function($scope) {
-})*/
-
-.controller('HabitacionesCtrl', function($scope, Friends) {
-  $scope.friends = Friends.all();
+.controller('HabitacionesCtrl', function($scope,Rooms) {
+  $scope.rooms = Rooms.all();
 })
 
-.controller('FriendDetailCtrl', function($scope, $stateParams, Friends) {
-  $scope.friend = Friends.get($stateParams.friendId);
+.controller('TypeCtrl', function($scope, $stateParams, Types) {
+  $scope.types = Types.get($stateParams.typeId);
 })
 
 .controller('HorariosCtrl', function($scope, $stateParams, Schedules) {
   $scope.schedules = Schedules.get($stateParams.scheduleId);
 })
+
+
+/*Controladores del Mapa*/
 
 .controller("MapController", function($scope, $state, $rootScope){
 	var MY_MAPTYPE_ID = 'custom_style';
