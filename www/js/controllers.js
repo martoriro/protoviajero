@@ -26,7 +26,7 @@ angular.module('starter.controllers', ['ionic'])
 .controller('HorariosCtrl', function($scope) {
 })
 
-.controller("MapController", function($scope, $state){
+.controller("MapController", function($scope, $state, $rootScope){
 	var MY_MAPTYPE_ID = 'custom_style';
 
 	var featureOpts = [
@@ -80,21 +80,8 @@ angular.module('starter.controllers', ['ionic'])
       new google.maps.Point(0, 0),
       new google.maps.Size(50, 50)
     ),
-    title: 'Hostal y apartamentos Andes"'
+    title: 'Hostal y apartamentos Andes'
 	});
-  /*google.maps.event.addListener(map, 'zoom_changed', function(){
-    var saiz = 50 * (map.getZoom()-10);
-    var icon = marker1.getIcon();
-    console.log(icon);
-    marker1.setIcon(new google.maps.MarkerImage(
-            icon.url,
-            new google.maps.Size(saiz,  saiz),
-            new google.maps.Point(0, 0),
-            new google.maps.Point(0, 0),
-            new google.maps.Size(saiz, saiz)
-        ));
-    console.log(icon);  
-  });*/
 
   var marker2 = new google.maps.Marker({
     position: new google.maps.LatLng(-33.43733, -70.64186),
@@ -106,7 +93,7 @@ angular.module('starter.controllers', ['ionic'])
       new google.maps.Point(0, 0),
       new google.maps.Size(50, 50)
     ),
-    title: 'Bombón oriental"'
+    title: 'Bombón oriental'
   });
 
   var marker3 = new google.maps.Marker({
@@ -119,13 +106,25 @@ angular.module('starter.controllers', ['ionic'])
       new google.maps.Point(0, 0),
       new google.maps.Size(50, 50)
     ),
-    title: 'Ruta vertical"'
+    title: 'Ruta vertical'
   });
 
   google.maps.event.addListener(marker1, 'click', function(){
-    $state.go('alojamiento.home');
+    $state.go('alojamiento.home', {organizationId: 0})
   });
 
-	map.mapTypes.set(MY_MAPTYPE_ID, customMapType);  
+  google.maps.event.addListener(marker2, 'click', function(){
+    $state.go('alojamiento.home', {organizationId: 1});
+  });
+
+  google.maps.event.addListener(marker3, 'click', function(){
+    $state.go('alojamiento.home', {organizationId: 2});
+  });
+
+google.maps.event.addListenerOnce(map, 'idle', function(){
+    navigator.splashscreen.hide();
+});
+
+map.mapTypes.set(MY_MAPTYPE_ID, customMapType);  
 
 });
