@@ -15,11 +15,11 @@
 
 <ion-tabs class="tabs-icon-top">
   <!-- Home -->
-  <ion-tab title="Home" icon="icon ion-home" ui-sref='alojamiento.home'>
+  <ion-tab title="Home" icon="icon ion-home" href="alojamiento/home/{{organizations.id}}">
     <ion-nav-view name="alojamiento-home"></ion-nav-view>
   </ion-tab>
   <!-- Contacto -->
-  <ion-tab title="Contacto" icon="icon ion-email" ui-sref='alojamiento.contacto'>
+  <ion-tab title="Contacto" icon="icon ion-email" href="alojamiento/contacto/{{organizations.id}}">
     <ion-nav-view name="alojamiento-contacto"></ion-nav-view>
   </ion-tab>
   <!-- Horarios -->

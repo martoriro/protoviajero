@@ -5,11 +5,20 @@ angular.module('starter.controllers', ['ionic'])
 
 .controller('HomeCtrl', function($scope){
 }) 
-.controller('AlojamientoCtrl', function($scope) {
-  
+
+
+/* Controladores alojamiento */
+
+.controller('AlojamientoCtrl', function($scope, $stateParams, Organizations) {
+  $scope.organizations= Organizations.get($stateParams.organizationId);  
 })
+
 .controller('AlojamientoHomeCtrl', function($scope, $stateParams, Organizations) {
   $scope.organizations= Organizations.get($stateParams.organizationId);
+})
+
+.controller('AlojamientoContactoCtrl', function($scope, $stateParams, Contacts){
+  $scope.contacts = Contacts.get($stateParams.contactId);
 })
 
 /*.controller('ContactoCtrl', function($scope) {
@@ -23,7 +32,8 @@ angular.module('starter.controllers', ['ionic'])
   $scope.friend = Friends.get($stateParams.friendId);
 })
 
-.controller('HorariosCtrl', function($scope) {
+.controller('HorariosCtrl', function($scope, $stateParams, Schedules) {
+  $scope.schedules = Schedules.get($stateParams.scheduleId);
 })
 
 .controller("MapController", function($scope, $state){

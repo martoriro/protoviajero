@@ -79,11 +79,11 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     })
 
     .state('alojamiento.contacto',{
-      url: '/contacto',
+      url: '/contacto/:contactId',
       views:{
         'alojamiento-contacto':{
           templateUrl: 'templates/alojamiento-contacto.html',
-          controller: 'ContactoCtrl'
+          controller: 'AlojamientoContactoCtrl'
         }
       }
     })
@@ -109,7 +109,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     })
 
     .state('alojamiento.horarios', {
-      url: '/horarios',
+      url: '/horarios/:scheduleId',
       views: {
         'alojamiento-horarios': {
           templateUrl: 'templates/alojamiento-horarios.html',
