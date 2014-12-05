@@ -27,7 +27,10 @@ a.item{
 	border-color: rgb(218, 112, 34);
 }
 
-
+.button.icon-left.ion-log-in.button-energized{
+	background-color: #FF8328;
+	border: none;
+}
 
 #map{
 	height: 100%;
@@ -36,4 +39,8 @@ a.item{
 
 .scroll{
 	height: 100%;
+}
+
+.button.button-icon.icon.ion-android-close{
+	font-size: 1px;
 }
