@@ -1,4 +1,8 @@
 /* Empty. Add your own CSS if you like */
+button.ubicacion{
+	background: url('img/ubicame.png');
+}
+
 i.menuIzq.icon {
 	font-size:  22.5px;
 }

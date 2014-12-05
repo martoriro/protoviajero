@@ -77,6 +77,13 @@ angular.module('starter.controllers', ['ionic'])
       var myLocation = new google.maps.Marker({
           position: new google.maps.LatLng(pos.coords.latitude, pos.coords.longitude),
           map: map,
+          icon:  new google.maps.MarkerImage(
+            'img/yo.png',
+            new google.maps.Size(50, 50),
+            new google.maps.Point(0, 0),
+            new google.maps.Point(0, 0),
+            new google.maps.Size(50, 50)
+          ),
           title: "Aquí"
       });
   });
