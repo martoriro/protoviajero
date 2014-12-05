@@ -1,9 +1,43 @@
-<ion-view title='<img src="../img/logoViajeroSide.png">'>
- <ion-nav-buttons side="left">
-    <button menu-toggle="left"class="button button-icon icon ion-navicon"></button>
-  </ion-nav-buttons>
+<div class="modal">
+  <ion-header-bar class="bar bar-header bar-energized">
+    <h1 class="title">Iniciar sesión</h1>
+    <div class="buttons">
+      <a class="button button-icon icon ion-android-close" ng-click="closeLogin()"></a>      
+    </div>
+  </ion-header-bar>
   <ion-content>
-    no funciona
-	
+	  <div class="list">
+	  <label class="item item-input item-stacked-label">
+	    <span class="input-label">Nombre</span>
+	    <input type="text" placeholder="Juan">
+	  </label>
+	  <label class="item item-input item-stacked-label">
+	    <span class="input-label">Apellidos</span>
+	    <input type="text" placeholder="Toro Veliz">
+	  </label>
+	  <label class="item item-input item-stacked-label">
+	    <span class="input-label">Email</span>
+	    <input type="text" placeholder="JToro@viajero.cl">
+	  </label>
+	  <label class="item item-input item-stacked-label">
+	    <span class="input-label">Contraseña</span>
+	    <input type="password">
+	  </label>
+	  <label class="item item-input item-stacked-label">
+	    <span class="input-label">Repita contraseña</span>
+	    <input type="password">
+	  </label>
+	  <label class="item item-input item-stacked-label">
+	    <span class="input-label">Fecha de nacimiento</span>
+	    <input type="date">
+	  </label>
+	   <label class="item">
+          <button class="button icon-left ion-plus-circled button-energized" type="submit">Crear Cuenta</button>
+       </label>
+        <ion-footer-bar align-title="left" keyboard-attach class="bar-assertive">
+   <h1 class="title">Title!</h1>
+ </ion-footer-bar>
+	</div>
   </ion-content>
-</ion-view>
+</div>
+

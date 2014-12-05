@@ -2,6 +2,7 @@ angular.module('starter.controllers', ['ionic'])
 
 .controller('AppCtrl', function($scope, $ionicModal, $timeout) {
   
+//***********************************LOGIN******************************/
   // Form data for the login modal
   $scope.loginData = {};
 
@@ -11,6 +12,7 @@ angular.module('starter.controllers', ['ionic'])
   }).then(function(modal) {
     $scope.modal = modal;
   });
+
 
   // Triggered in the login modal to close it
   $scope.closeLogin = function() {
@@ -32,7 +34,7 @@ angular.module('starter.controllers', ['ionic'])
       $scope.closeLogin();
     }, 1000);
   };
-
+//***********************************REGISTRO******************************/
 
 
 

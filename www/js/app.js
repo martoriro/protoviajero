@@ -41,15 +41,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       }
     })
 
-    .state("app.crear-cuenta",{
-      url:"/crear-cuenta",
-      views:{
-        'menuContent' :{
-          templateUrl:"templates/crear-cuenta.html"
-        }
-      }
-    })
-
     .state("app.facebook",{
       url:"/facebook",
       views:{

@@ -31,6 +31,10 @@ a.item{
 	background-color: #FF8328;
 	border: none;
 }
+.button.icon-left.ion-plus-circled.button-energized{
+	background-color: #FF8328;
+	border: none;
+}
 
 #map{
 	height: 100%;
