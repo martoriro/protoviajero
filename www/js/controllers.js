@@ -33,9 +33,6 @@ angular.module('starter.controllers', ['ionic'])
     }, 1000);
   };
 
-
-
-
 })
 
 .controller('HomeCtrl', function($scope){
@@ -97,7 +94,7 @@ angular.module('starter.controllers', ['ionic'])
 
 	var mapOptions = {
 		center: new google.maps.LatLng(-33.4500, -70.6667),
-      zoom: 10,
+      zoom: 14,
         mapTypeControlOptions: {
     		mapTypeIds: [google.maps.MapTypeId.ROADMAP, MY_MAPTYPE_ID]
 		},
@@ -107,9 +104,13 @@ angular.module('starter.controllers', ['ionic'])
 
   };
 
+  var options = {enableHighAccuracy: true};
+
+  var myLocation;
+
   navigator.geolocation.getCurrentPosition(function(pos) {
       map.setCenter(new google.maps.LatLng(pos.coords.latitude, pos.coords.longitude));
-      var myLocation = new google.maps.Marker({
+      myLocation = new google.maps.Marker({
           position: new google.maps.LatLng(pos.coords.latitude, pos.coords.longitude),
           map: map,
           icon:  new google.maps.MarkerImage(
@@ -121,7 +122,7 @@ angular.module('starter.controllers', ['ionic'])
           ),
           title: "Aquí"
       });
-  });
+  }, null, options);
 
   var map = new google.maps.Map(document.getElementById("map"), mapOptions);
 
@@ -169,6 +170,36 @@ angular.module('starter.controllers', ['ionic'])
     ),
     title: 'Ruta vertical'
   });
+
+  function UbicacionControl(controlDiv, map){
+    controlDiv.style = 'margin: 25px; z-index: 99;';
+
+    var controlUI = document.createElement('div');
+    controlDiv.appendChild(controlUI);
+
+    // Set CSS for the control interior.
+    var imgButton = document.createElement('img');
+    imgButton.src = 'img/ubicame.png';
+    imgButton.height = '50';
+    imgButton.width = '50';
+    controlUI.appendChild(imgButton);
+
+    google.maps.event.addDomListener(controlUI, 'click', function() {
+      var options = {maximumAge: 3000, timeout: 5000, enableHighAccuracy: true};
+
+      navigator.geolocation.getCurrentPosition(function(pos) {
+          map.setCenter(new google.maps.LatLng(pos.coords.latitude, pos.coords.longitude));
+          myLocation.setPosition(new google.maps.LatLng(pos.coords.latitude, pos.coords.longitude));
+      });
+  });
+
+  }
+
+  var homeControlDiv = document.createElement('div');
+  var homeControl = new UbicacionControl(homeControlDiv, map);
+
+  homeControlDiv.index = 0;
+  map.controls[google.maps.ControlPosition.TOP_RIGHT].push(homeControlDiv);
 
   google.maps.event.addListener(marker1, 'click', function(){
     $state.go('alojamiento.home', {organizationId: 0})
