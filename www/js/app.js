@@ -41,11 +41,31 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       }
     })
 
-    .state("app.login",{
-      url:"/login",
+    
+
+    .state("app.crear-cuenta",{
+      url:"/crear-cuenta",
       views:{
         'menuContent' :{
-          templateUrl:"templates/login.html"
+          templateUrl:"templates/crear-cuenta.html"
+        }
+      }
+    })
+
+    .state("app.facebook",{
+      url:"/facebook",
+      views:{
+        'menuContent' :{
+          templateUrl:"templates/facebook.html"
+        }
+      }
+    })
+
+    .state("app.beneficios",{
+      url:"/beneficios",
+      views:{
+        'menuContent' :{
+          templateUrl:"templates/beneficios.html"
         }
       }
     })
