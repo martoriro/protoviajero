@@ -20,6 +20,23 @@ i.menuIzq.icon {
 	color: white;
 }
 
+ul.list.beneficios{
+	background: #ff9228;
+}
+
+.modal.beneficios{
+	background: #ff9228;
+}
+
+.item{
+	background: transparent;
+}
+
+li img{
+	width: 100%;
+	height: 100%;
+}
+
 a.item{
 	background: transparent;
 	padding-top: 11px;
