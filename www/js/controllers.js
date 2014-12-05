@@ -15,8 +15,14 @@ angular.module('starter.controllers', ['ionic'])
 
   $ionicModal.fromTemplateUrl('templates/crear-cuenta.html', {
     scope: $scope
-  }).then(function(modal){
+  }).then(function(modal) {
     $scope.modal2 = modal;
+  });
+
+  $ionicModal.fromTemplateUrl('templates/beneficios.html', {
+    scope: $scope
+  }).then(function(modal) {
+    $scope.modal3 = modal;
   });
 
   // Triggered in the login modal to close it
@@ -47,7 +53,15 @@ angular.module('starter.controllers', ['ionic'])
   $scope.closeCreate = function(){
     $scope.modal2.hide();
   }
-  
+
+$scope.beneficios = function() {
+    $scope.modal3.show();
+  }
+
+$scope.closeBeneficios = function(){
+    $scope.modal3.hide();
+}
+
 })
 
 .controller('HomeCtrl', function($scope){
