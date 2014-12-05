@@ -1,3 +1,7 @@
+@font-face{
+	src: url(font/Tekton.ttf);
+	font-family: Tekton Pro;
+}
 /* Empty. Add your own CSS if you like */
 button.ubicacion{
 	background: url('img/ubicame.png');
@@ -22,6 +26,7 @@ i.menuIzq.icon {
 
 ul.list.beneficios{
 	background: #ff9228;
+
 }
 
 .modal.beneficios{
@@ -69,7 +74,19 @@ a.item.selected{
 .scroll{
 	height: 100%;
 }
-
+ 
 .button.button-icon.icon.ion-android-close{
 	font-size: 1px;
+}
+
+
+.item.beneficios p , h2 {
+	white-space: normal;
+	color: white;
+	font-family: Tekton Pro;
+
+}
+
+.item.beneficios h2 {
+	font-weight: bold;
 }
