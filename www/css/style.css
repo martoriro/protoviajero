@@ -11,6 +11,24 @@ i.menuIzq.icon {
 	background-color: #FF8328;	
 }
 
+.menu.menu-left{
+	background-color: #FF8328;		
+}
+
+.list.menuIzquierdo {
+	background: #FF8328;
+	color: white;
+}
+
+a.item{
+	background: transparent;
+	padding-top: 11px;
+	padding-bottom: 11px;
+	border-color: rgb(218, 112, 34);
+}
+
+
+
 #map{
 	height: 100%;
 	width: 100%;
