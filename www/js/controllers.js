@@ -234,7 +234,7 @@ $scope.closeBeneficios = function(){
   });
 
   google.maps.event.addListener(marker2, 'click', function(){
-    $state.go('alojamiento.home', {organizationId: 1});
+    $state.go('restaurant.home', {organizationId: 0});
   });
 
   google.maps.event.addListener(marker3, 'click', function(){

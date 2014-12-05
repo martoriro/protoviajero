@@ -125,6 +125,66 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
           controller: 'HorariosCtrl'
         }
       }
+    })
+
+
+    .state('restaurant', {
+      url: "/restaurant",
+      abstract: true,
+      templateUrl: "templates/restaurant.html",
+      controller: 'RestaurantCtrl'
+    })
+
+    // Each tab has its own nav history stack:
+
+    .state('restaurant.home', {
+      url: '/home/:organizationId',
+      views: {
+        'restaurant-home': {
+          templateUrl: 'templates/restaurant-home.html',
+          controller: 'RestaurantHomeCtrl'
+        }
+      }
+    })
+
+    .state('restaurant.contacto',{
+      url: '/contacto/:contactId',
+      views:{
+        'restaurant-contacto':{
+          templateUrl: 'templates/restaurant-contacto.html',
+          controller: 'RestaurantContactoCtrl'
+        }
+      }
+    })
+
+    .state('restaurant.habitaciones', {
+      url: '/habitaciones/:roomId',
+      views: {
+        'restaurant-habitaciones': {
+          templateUrl: 'templates/restaurant-habitaciones.html',
+          controller: 'RestaurantHabitacionesCtrl'
+        }
+      }
+    })
+
+    .state('restaurant.habitacion-detail', {
+      url: '/habitacion/:typeId',
+      views: {
+        'restaurant-habitaciones': {
+          templateUrl: 'templates/restaurant-detail.html',
+          controller: 'RestaurantTypeCtrl'
+        }
+      }
+    })
+
+    .state('restaurant.horarios', {
+      url: '/horarios/:scheduleId',
+      views: {
+        'restaurant-horarios': {
+          templateUrl: 'templates/restaurant-horarios.html',
+          controller: 'RestaurantHorariosCtrl'
+        }
+      }
     });
 
   // if none of the above states are matched, use this as the fallback

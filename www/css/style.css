@@ -61,6 +61,11 @@ a.item.selected{
 	border: none;
 }
 
+.button.button-block.button-positive{
+	background-color: #FF8328;
+	border: none;
+}
+
 #map{
 	height: 100%;
 	width: 100%;
