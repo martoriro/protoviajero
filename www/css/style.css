@@ -8,7 +8,7 @@ i.menuIzq.icon {
 }
 
 .bar.bar-header.bar-energized{
-	background-color: #FF8328;	
+	background-color: #FF8328;
 }
 
 .menu.menu-left{
@@ -24,7 +24,15 @@ a.item{
 	background: transparent;
 	padding-top: 11px;
 	padding-bottom: 11px;
+
+}
+
+a.item.menu{
 	border-color: rgb(218, 112, 34);
+}
+
+a.item.selected{
+	background-color: rgb(240, 240, 240);
 }
 
 .button.icon-left.ion-log-in.button-energized{

@@ -3,22 +3,32 @@
     <div class="list card">
     	<div class="item item-avatar">
     	    <img src="{{organizations.logo}}">
-            
     	    <h2>{{organizations.name}}</h2>
-    	    <p>{{organizations.calificacion}}</p>
+    	    <p>
+            <!--{{organizations.calificacion}}-->
+            <i>Merced 504, Santiago</i>
+            <div class='ion-android-star' style="display: inline"></div>
+            <div class='ion-android-star' style="display: inline"></div>
+            <div class='ion-android-star' style="display: inline"></div>
+            <div class='ion-android-star' style="display: inline"></div>
+            </p>
     	</div>
         <div class="item item-divider">
             <p>Servicio de {{organizations.servicioPrin}}
         </div>
     	<div class="item item-body">
     		<div class="row">
-    			<!--Imagen principal de la organización-->
+    			<!--Imagen principal de la organización-->                
     			<div class="col col-50">
+                <center>
     				<img src="{{organizations.imgOrganizacion[0]}}">
+                </center>
     			</div>
                 <div class="col col-50">
+                <center>
                     <img src="{{organizations.imgOrganizacion[1]}}">
-                </div>    			
+                </center>
+                </div>  			
     		</div>
     		<div class="row">
     			<button class="button button-block button-positive">
