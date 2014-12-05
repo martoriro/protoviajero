@@ -13,6 +13,11 @@ angular.module('starter.controllers', ['ionic'])
     $scope.modal = modal;
   });
 
+  $ionicModal.fromTemplateUrl('templates/crear-cuenta.html', {
+    scope: $scope
+  }).then(function(modal){
+    $scope.modal2 = modal;
+  });
 
   // Triggered in the login modal to close it
   $scope.closeLogin = function() {
@@ -35,6 +40,14 @@ angular.module('starter.controllers', ['ionic'])
     }, 1000);
   };
 
+  $scope.create = function() {
+    $scope.modal2.show();
+  }
+
+  $scope.closeCreate = function(){
+    $scope.modal2.hide();
+  }
+  
 })
 
 .controller('HomeCtrl', function($scope){

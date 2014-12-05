@@ -12,11 +12,11 @@ i.menuIzq.icon {
 }
 
 .menu.menu-left{
-	background-color: #FF8328;		
+	background-color: #ff9228;		
 }
 
 .list.menuIzquierdo {
-	background: #FF8328;
+	background: #ff9228;
 	color: white;
 }
 
@@ -28,7 +28,7 @@ a.item{
 }
 
 a.item.menu{
-	border-color: rgb(218, 112, 34);
+	border-color: #FF8328;
 }
 
 a.item.selected{
