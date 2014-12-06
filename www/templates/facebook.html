@@ -1,9 +1,25 @@
-<ion-view title='<img src="../img/logoViajeroSide.png">'>
- <ion-nav-buttons side="left">
-    <button menu-toggle="left"class="button button-icon icon ion-navicon"></button>
-  </ion-nav-buttons>
+<div class="modal">
+
+  <ion-header-bar class="bar bar-header bar-positive">
+
+    <h1 class="title"> Acceder con Facebook</h1>
+     <div class="buttons">
+      <button class="button-icon ion-android-close" style="color: white" ng-click="closeFacebook()"></button>      
+    </div>
+  </ion-header-bar>
   <ion-content>
-    
-	
+    <form>
+      <div class="list">
+        <label class="item item-input">
+          <span class="input-label">Usuario:</span>
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Contraseña:</span>
+        </label>
+        <label class="item">
+          <button class="button icon-left ion-log-in button-positive" type="submit">Ingresar</button>
+        </label>
+      </div>
+    </form>
   </ion-content>
-</ion-view>
+</div>
