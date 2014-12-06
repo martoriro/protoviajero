@@ -107,7 +107,13 @@ $scope.closeBeneficios = function(){
   $scope.schedules = Schedules.get($stateParams.scheduleId);
 })
 
+.controller('RestaurantCtrl', function($scope, $stateParams) {
 
+})
+
+.controller('RestaurantHomeCtrl', function($scope, $stateParams) {
+
+})
 /*Controladores del Mapa*/
 
 .controller("MapController", function($scope, $state, $rootScope){
@@ -159,7 +165,7 @@ $scope.closeBeneficios = function(){
             'img/yo.png',
             new google.maps.Size(50, 50),
             new google.maps.Point(0, 0),
-            new google.maps.Point(0, 0),
+            null,
             new google.maps.Size(50, 50)
           ),
           title: "Aquí"
@@ -181,7 +187,7 @@ $scope.closeBeneficios = function(){
       'img/lodging.png',
       new google.maps.Size(50, 50),
       new google.maps.Point(0, 0),
-      new google.maps.Point(0, 0),
+      null,
       new google.maps.Size(50, 50)
     ),
     title: 'Hostal y apartamentos Andes'
@@ -194,7 +200,7 @@ $scope.closeBeneficios = function(){
       'img/diner.png',
       new google.maps.Size(50, 50),
       new google.maps.Point(0, 0),
-      new google.maps.Point(0, 0),
+      null,
       new google.maps.Size(50, 50)
     ),
     title: 'Bombón oriental'
@@ -207,10 +213,127 @@ $scope.closeBeneficios = function(){
       'img/adventure.png',
       new google.maps.Size(50, 50),
       new google.maps.Point(0, 0),
-      new google.maps.Point(0, 0),
+      null,
       new google.maps.Size(50, 50)
     ),
     title: 'Ruta vertical'
+  });
+
+  var marker4 = new google.maps.Marker({
+    position: new google.maps.LatLng(-29.90998, -71.27452),
+    map: map,
+    icon:  new google.maps.MarkerImage(
+      'img/lodgingOff.png',
+      new google.maps.Size(50, 50),
+      new google.maps.Point(0, 0),
+      null,
+      new google.maps.Size(50, 50)
+    ),
+    title: 'Hotel Club La Serena'
+  });
+
+  var marker5 = new google.maps.Marker({
+    position: new google.maps.LatLng(-36.82621, -73.04934),
+    map: map,
+    icon:  new google.maps.MarkerImage(
+      'img/dinerOff.png',
+      new google.maps.Size(50, 50),
+      new google.maps.Point(0, 0),
+      null,
+      new google.maps.Size(50, 50)
+    ),
+    title: 'Restaurant Mamut'
+  });
+
+  var marker6 = new google.maps.Marker({
+    position: new google.maps.LatLng(-18.45007, -70.29642),
+    map: map,
+    icon:  new google.maps.MarkerImage(
+      'img/adventureOff.png',
+      new google.maps.Size(50, 50),
+      new google.maps.Point(0, 0),
+      null,
+      new google.maps.Size(50, 50)
+    ),
+    title: 'Kayak Chinchorro'
+  });
+
+  var marker7 = new google.maps.Marker({
+    position: new google.maps.LatLng(-53.15796, -70.90438),
+    map: map,
+    icon:  new google.maps.MarkerImage(
+      'img/dinerOff.png',
+      new google.maps.Size(50, 50),
+      new google.maps.Point(0, 0),
+      null,
+      new google.maps.Size(50, 50)
+    ),
+    title: 'Restaurant Sabores'
+  });
+
+  var marker8 = new google.maps.Marker({
+    position: new google.maps.LatLng(-42.47953, -73.69667),
+    map: map,
+    icon:  new google.maps.MarkerImage(
+      'img/lodgingOff.png',
+      new google.maps.Size(50, 50),
+      new google.maps.Point(0, 0),
+      null,
+      new google.maps.Size(50, 50)
+    ),
+    title: 'Hotel Quilquico'
+  });
+
+  var marker9 = new google.maps.Marker({
+    position: new google.maps.LatLng(-33.49437, -70.74822),
+    map: map,
+    icon:  new google.maps.MarkerImage(
+      'img/lodgingOff.png',
+      new google.maps.Size(50, 50),
+      new google.maps.Point(0, 0),
+      null,
+      new google.maps.Size(50, 50)
+    ),
+    title: 'Grand Hyatt'
+  });
+
+  var marker10 = new google.maps.Marker({
+    position: new google.maps.LatLng(-33.44011, -70.65588),
+    map: map,
+    icon:  new google.maps.MarkerImage(
+      'img/dinerOff.png',
+      new google.maps.Size(50, 50),
+      new google.maps.Point(0, 0),
+      null,
+      new google.maps.Size(50, 50)
+    ),
+    title: 'Santiago Gourmet'
+  });
+
+  var marker11 = new google.maps.Marker({
+    position: new google.maps.LatLng(-33.46214, -70.59407),
+    map: map,
+    icon:  new google.maps.MarkerImage(
+      'img/lodgingOff.png',
+      new google.maps.Size(50, 50),
+      new google.maps.Point(0, 0),
+      null,
+      new google.maps.Size(50, 50)
+    ),
+    title: 'Casa Muriel'
+  });
+
+  var marker12 = new google.maps.Marker({
+    position: new google.maps.LatLng(-33.48322, -70.53414),
+    map: map,
+    icon:  new google.maps.MarkerImage(
+      'img/dinerOff.png',
+      new google.maps.Size(50, 50),
+      new google.maps.Point(0, 0),
+      null,
+      new google.maps.Size(50, 50)
+    ),
+    title: 'Antuperu'
   });
 
   function UbicacionControl(controlDiv, map){
@@ -248,6 +371,10 @@ $scope.closeBeneficios = function(){
   });
 
   google.maps.event.addListener(marker2, 'click', function(){
+    $state.go('restaurant.home', {organizationId: 0});
+  });
+
+google.maps.event.addListener(marker12, 'click', function(){
     $state.go('restaurant.home', {organizationId: 0});
   });
 
