@@ -81,10 +81,10 @@ angular.module('starter.services', [])
 })
 
 .factory('Types', function(){
-  var types = [{id: 0, name: "Suite presidencial" ,foto: ["foto1", "foto2"], descripcion: "descripción de la habitacion"},
-               {id: 1, name: "Habitación primera clase" ,foto: ["foto1", "foto2"], descripcion: "descripción de la habitacion"},
-               {id: 2, name: "Habitación clásica" ,foto: ["foto1", "foto2"], descripcion: "descripción de la habitacion"},
-               {id: 3, name: "Habitación con decoraciones" ,foto: ["foto1", "foto2"], descripcion: "descripción de la habitacion"}];
+  var types = [{id: 0, name: "Suite presidencial" ,foto: ["img/organization/rooms/11.png", "img/organization/rooms/10.png"], descripcion: "Con el Porto a sus pies, esta suite con 240m2, equipada con tecnologías de punta, jacuzzi panorámico, habitación de vestir y piano, conjuga la suntuosidad y el lujo haciendo de su estadía un momento inolvidable."},
+               {id: 1, name: "Habitación primera clase" ,foto: ["img/organization/rooms/20.png", "img/organization/rooms/21.png"], descripcion: "Amplitud y tranquilidad en unas acogedoras habitaciones, modernas y de diseño con vista al jardín interior."},
+               {id: 2, name: "Habitación clásica" ,foto: ["img/organization/rooms/30.png", "img/organization/rooms/31.png"], descripcion: "Habitaciones luminosas con terraza amueblada (sillas y mesa) y con vistas a la ciudad.  Perfectas para trabajar y relajarse, la Habitación clásica está equipada con todo lo que necesitas para que tu estancia en Castillo Rojo sea placentera y productiva."},
+               {id: 3, name: "Habitación con decoraciones" ,foto: ["img/organization/rooms/40.png", "img/organization/rooms/41.png"], descripcion: "Habitaciones con entretenidos y novedosos temas para que disfrutes junto con tu familia  o acompañante."}];
   return{
     all:function(){
       return types;
