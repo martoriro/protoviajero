@@ -157,22 +157,12 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       }
     })
 
-    .state('restaurant.habitaciones', {
-      url: '/habitaciones/:roomId',
+    .state('restaurant.menu', {
+      url: '/menu/:menuId',
       views: {
-        'restaurant-habitaciones': {
-          templateUrl: 'templates/restaurant-habitaciones.html',
-          controller: 'RestaurantHabitacionesCtrl'
-        }
-      }
-    })
-
-    .state('restaurant.habitacion-detail', {
-      url: '/habitacion/:typeId',
-      views: {
-        'restaurant-habitaciones': {
-          templateUrl: 'templates/restaurant-detail.html',
-          controller: 'RestaurantTypeCtrl'
+        'restaurant-menu': {
+          templateUrl: 'templates/restaurant-menu.html',
+          controller: 'RestaurantMenuCtrl'
         }
       }
     })

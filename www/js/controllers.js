@@ -114,6 +114,19 @@ $scope.closeBeneficios = function(){
 .controller('RestaurantHomeCtrl', function($scope, $stateParams) {
 
 })
+
+.controller('RestaurantContactoCtrl', function($scope, $stateParams) {
+
+})
+
+.controller('RestaurantHorariosCtrl', function($scope, $stateParams) {
+
+})
+
+.controller('RestaurantMenuCtrl', function($scope, MenuItems) {
+  $scope.MenuItems = MenuItems.all();
+})
+
 /*Controladores del Mapa*/
 
 .controller("MapController", function($scope, $state, $rootScope){
@@ -371,10 +384,6 @@ $scope.closeBeneficios = function(){
   });
 
   google.maps.event.addListener(marker2, 'click', function(){
-    $state.go('restaurant.home', {organizationId: 0});
-  });
-
-google.maps.event.addListener(marker12, 'click', function(){
     $state.go('restaurant.home', {organizationId: 0});
   });
 

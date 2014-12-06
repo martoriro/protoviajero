@@ -79,17 +79,6 @@ a.item.selected{
 	font-size: 1px;
 }
 
-
-.item.beneficios p , h2 {
-	white-space: normal;
-	color: white;	
-
-}
-
-.item.beneficios h2 {
-	font-weight: bold;
-}
-
 p {
 	text-align: justify;
 }

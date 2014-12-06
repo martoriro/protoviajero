@@ -80,6 +80,25 @@ angular.module('starter.services', [])
   }
 })
 
+.factory('MenuItems', function(){
+  var menuItems = [
+    {id:0, name: "Torta tres leches", precio: "$3.500 la porción", descripcion: "Exquisita torta de tres leches con adornos de crema de dulce de leche.", foto: "img/organization/menu/00.png"},
+    {id:1, name: "Torta mil hojas manjar", precio: "$2.000 la porción", descripcion: "Nuestra famosa torta de mil hojas manjar, con el mejor manjar casero de Bombón oriental.", foto: "img/organization/menu/01.png"},
+    {id:2, name: "Pie de limon", precio: "$3.000 la porción", descripcion: "Pie de limón con limones sacados directamente desde el patio.", foto: "img/organization/menu/02.png"},
+    {id:3, name: "Torta panqueque manjar", precio: "$1.500 la porción", descripcion: "Fresca torta panqueque manjar con el mejor manjar casero de Bombón oriental", foto: "img/organization/menu/03.png"}
+  ];
+               
+               
+  return{
+    all:function(){
+      return menuItems;
+    },
+    get:function(menuId){
+      return menuitems[menuId];
+    }
+  }
+})
+
 .factory('Types', function(){
   var types = [{id: 0, name: "Suite presidencial" ,foto: ["img/organization/rooms/11.png", "img/organization/rooms/10.png"], descripcion: "Con el Porto a sus pies, esta suite con 240m2, equipada con tecnologías de punta, jacuzzi panorámico, habitación de vestir y piano, conjuga la suntuosidad y el lujo haciendo de su estadía un momento inolvidable."},
                {id: 1, name: "Habitación primera clase" ,foto: ["img/organization/rooms/20.png", "img/organization/rooms/21.png"], descripcion: "Amplitud y tranquilidad en unas acogedoras habitaciones, modernas y de diseño con vista al jardín interior."},

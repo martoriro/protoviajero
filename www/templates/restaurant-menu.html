@@ -1,0 +1,14 @@
+<ion-view title="Menú">
+  <ion-content>
+  	
+  	<div class="list" >
+		<a class="item item-thumbnail-left" ng-repeat="menu in MenuItems" type="item-text-wrap" href="" >
+    		<img src="{{menu.foto}}">
+      		<h2>{{menu.name}}</h2>
+      		<p>{{menu.precio}}</p>
+          <p>{{menu.descripcion}}</p>
+    	</a>    	
+	</div>
+    
+  </ion-content>
+</ion-view>
