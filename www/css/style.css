@@ -61,10 +61,10 @@ a.item.selected{
 	border: none;
 }
 
-.button.button-block.button-positive{
+/*.button.button-block.button-positive{
 	background-color: #FF8328;
 	border: none;
-}
+}*/
 
 #map{
 	height: 100%;
@@ -88,4 +88,8 @@ a.item.selected{
 
 .item.beneficios h2 {
 	font-weight: bold;
+}
+
+p {
+	text-align: justify;
 }

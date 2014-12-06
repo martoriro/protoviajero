@@ -25,6 +25,12 @@ angular.module('starter.controllers', ['ionic'])
     $scope.modal3 = modal;
   });
 
+  $ionicModal.fromTemplateUrl('templates/facebook.html', {
+    scope: $scope
+  }).then(function(modal) {
+    $scope.modal4 = modal;
+  });
+
   // Triggered in the login modal to close it
   $scope.closeLogin = function() {
     $scope.modal.hide();
@@ -61,6 +67,14 @@ $scope.beneficios = function() {
 $scope.closeBeneficios = function(){
     $scope.modal3.hide();
 }
+
+ $scope.facebook = function() {
+    $scope.modal4.show();
+  }
+
+  $scope.closeFacebook = function(){
+    $scope.modal4.hide();
+  }
 
 })
 
