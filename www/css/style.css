@@ -1,8 +1,3 @@
-@font-face{
-	src: url(font/Tekton.ttf);
-	font-family: Tekton Pro;
-}
-/* Empty. Add your own CSS if you like */
 button.ubicacion{
 	background: url('img/ubicame.png');
 }
@@ -87,8 +82,7 @@ a.item.selected{
 
 .item.beneficios p , h2 {
 	white-space: normal;
-	color: white;
-	font-family: Tekton Pro;
+	color: white;	
 
 }
 
