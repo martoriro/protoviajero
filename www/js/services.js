@@ -99,6 +99,25 @@ angular.module('starter.services', [])
   }
 })
 
+.factory('DeportesItems', function(){
+  var deportesItems = [
+    {id:0, name: "Rafting", precio: "$15.000 por persona", descripcion: "El rafting comienza en la base de Ruta Vertical, ubicada a pocos metros de la plaza de San José de Maipo, con la entrega del equipo y el cambio de ropa. Nos trasladamos luego en nuestros transportes al punto de inicio donde después de un pequeño curso instructivo de rafting y seguridad comenzaremos el descenso por los rápidos del río Maipo. Después del rafting te trasladamos por supuesto de regreso a nuestra base.", foto: "img/organization/deportes/rafting.png"},
+    {id:1, name: "Canopy", precio: "$14.000 por persona", descripcion: "Actividad ideal para sentir la adrenalina y la sensación de volar en la naturaleza. Consiste en desplazarte entre árbol y árbol por medio de un cable de acero y a gran altura.", foto: "img/organization/deportes/canopy.png"},
+    {id:2, name: "Paintball", precio: "$27.000 por persona", descripcion: "El Paintball es un deporte en el que los participantes utilizan pistolas de aire comprimido llamadas marcadoras, para disparar pequeñas bolas de pintura contra los otros jugadores. Es un juego de estrategia y trabajo en equipo en el cual los jugadores tocados por bolas de pintura durante el juego son eliminados.", foto: "img/organization/deportes/paintball.png"},
+    {id:3, name: "Hydrospeed", precio: "$25.000 por persona", descripcion: "Este deporte tan excitante nació en Francia en los años cincuenta y hoy en día cuenta con un número de aficionados cada vez mayor en todo el mundo. Consiste en descender el río recostado sobre una tabla especialmente acondicionada para el uso en aguas blancas (similar a una tabla de bodydoard).", foto: "img/organization/deportes/hydrospeed.png"}
+  ];
+               
+               
+  return{
+    all:function(){
+      return deportesItems;
+    },
+    get:function(deporteId){
+      return deportesItems[deporteId];
+    }
+  }
+})
+
 .factory('Types', function(){
   var types = [{id: 0, name: "Suite presidencial" ,foto: ["img/organization/rooms/11.png", "img/organization/rooms/10.png"], descripcion: "Con el Porto a sus pies, esta suite con 240m2, equipada con tecnologías de punta, jacuzzi panorámico, habitación de vestir y piano, conjuga la suntuosidad y el lujo haciendo de su estadía un momento inolvidable."},
                {id: 1, name: "Habitación primera clase" ,foto: ["img/organization/rooms/20.png", "img/organization/rooms/21.png"], descripcion: "Amplitud y tranquilidad en unas acogedoras habitaciones, modernas y de diseño con vista al jardín interior."},

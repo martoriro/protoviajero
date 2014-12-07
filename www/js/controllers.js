@@ -127,6 +127,28 @@ $scope.closeBeneficios = function(){
   $scope.MenuItems = MenuItems.all();
 })
 
+
+.controller('DaCtrl', function($scope, $stateParams) {
+
+})
+
+.controller('DaHomeCtrl', function($scope, $stateParams) {
+
+})
+.controller('DaContactoCtrl', function($scope, $stateParams) {
+
+})
+
+.controller('DaHorariosCtrl', function($scope, $stateParams) {
+
+})
+
+.controller('DaDeportesCtrl', function($scope, DeportesItems) {
+  $scope.DeportesItems = DeportesItems.all();
+})
+
+
+
 /*Controladores del Mapa*/
 
 .controller("MapController", function($scope, $state, $rootScope){
@@ -388,7 +410,7 @@ $scope.closeBeneficios = function(){
   });
 
   google.maps.event.addListener(marker3, 'click', function(){
-    $state.go('alojamiento.home', {organizationId: 2});
+    $state.go('da.home', {organizationId: 0});
   });
 
 google.maps.event.addListenerOnce(map, 'idle', function(){

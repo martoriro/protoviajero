@@ -1,0 +1,13 @@
+<ion-view title="Deportes">
+  <ion-content>  	
+  	<div class="list" >
+		<a class="item item-thumbnail-left" ng-repeat="deporte in DeportesItems" type="item-text-wrap" href="" >
+    		<img src="{{deporte.foto}}">
+      		<h2>{{deporte.name}}</h2>
+      		<p>{{deporte.precio}}</p>
+          <p>{{deporte.descripcion}}</p>
+    	</a>    	
+	</div>
+    
+  </ion-content>
+</ion-view>

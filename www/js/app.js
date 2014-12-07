@@ -175,8 +175,57 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
           controller: 'RestaurantHorariosCtrl'
         }
       }
-    });
+    })
 
+    .state('da', {
+      url: "/da",
+      abstract: true,
+      templateUrl: "templates/da.html",
+      controller: 'DaCtrl'
+    })
+
+    // Each tab has its own nav history stack:
+
+    .state('da.home', {
+      url: '/home/:organizationId',
+      views: {
+        'da-home': {
+          templateUrl: 'templates/da-home.html',
+          controller: 'DaHomeCtrl'
+        }
+      }
+    })
+
+  .state('da.contacto',{
+      url: '/contacto/:contactId',
+      views:{
+        'da-contacto':{
+          templateUrl: 'templates/da-contacto.html',
+          controller: 'DaContactoCtrl'
+        }
+      }
+    })
+
+    .state('da.deportes', {
+      url: '/deportes',
+      views: {
+        'da-deportes': {
+          templateUrl: 'templates/da-deportes.html',
+          controller: 'DaDeportesCtrl'
+        }
+      }
+    })
+
+    .state('da.horarios', {
+      url: '/horarios/:scheduleId',
+      views: {
+        'da-horarios': {
+          templateUrl: 'templates/da-horarios.html',
+          controller: 'DaHorariosCtrl'
+        }
+      }
+    })
+    ;
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/app/home');
 });
