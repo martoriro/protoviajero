@@ -68,6 +68,15 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       }
     })
 
+    .state("app.buscador", {
+      url:"/buscador",
+      views:{
+        'menuContent' :{
+          templateUrl:"templates/buscador.html"
+        }
+      }
+    })
+
     .state('alojamiento', {
       url: "/alojamiento",
       abstract: true,

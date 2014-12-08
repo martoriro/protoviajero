@@ -54,32 +54,47 @@ angular.module('starter.controllers', ['ionic'])
 
   $scope.create = function() {
     $scope.modal2.show();
-  }
+  };
 
   $scope.closeCreate = function(){
     $scope.modal2.hide();
-  }
+  };
 
 $scope.beneficios = function() {
     $scope.modal3.show();
-  }
+  };
 
 $scope.closeBeneficios = function(){
     $scope.modal3.hide();
-}
+};
 
  $scope.facebook = function() {
     $scope.modal4.show();
-  }
+  };
 
   $scope.closeFacebook = function(){
     $scope.modal4.hide();
-  }
+  };
+})
+
+.controller('HomeCtrl', function($scope, $ionicModal){
+  $ionicModal.fromTemplateUrl('templates/buscador.html', {
+    scope: $scope
+  }).then(function(modal) {
+    $scope.buscador = modal;
+  });
+
+
+  $scope.closeSearch = function(){
+    $scope.buscador.hide();
+  };
+
+  $scope.search = function() {
+    $scope.buscador.show();
+  };
 
 })
 
-.controller('HomeCtrl', function($scope){
-}) 
 
 /* Controladores alojamiento */
 
