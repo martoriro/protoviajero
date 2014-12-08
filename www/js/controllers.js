@@ -285,7 +285,7 @@ $scope.closeBeneficios = function(){
           position: new google.maps.LatLng(pos.coords.latitude, pos.coords.longitude),
           map: map,
           icon:  new google.maps.MarkerImage(
-            'img/yo.png',
+            'img/juan.png',
             new google.maps.Size(50, 50),
             new google.maps.Point(0, 0),
             null,
