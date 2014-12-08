@@ -373,6 +373,7 @@ $scope.closeBeneficios = function(){
     title: 'Hostal y apartamentos Andes'
 	});
 
+
   var marker2 = new google.maps.Marker({
     position: new google.maps.LatLng(-33.43733, -70.64186),
     map: map,
@@ -412,6 +413,23 @@ $scope.closeBeneficios = function(){
     title: 'Hotel Club La Serena'
   });
 
+  var contentString = '<div id="content">'+
+      '<h3>Hotel Club la serena</h3>'+
+      '<div id="bodyContent">'+
+      '<p>Servicio de alojamiento</p>'+
+      '<p>Avenida del Mar 1000 - La Serena - Coquimbo</p>'+
+      '</div>'+
+      '</div>';  
+
+  var infowindow = new google.maps.InfoWindow({
+      content: contentString
+  });
+
+  google.maps.event.addListener(marker4, 'click', function() {
+    infowindow.open(map,marker4);
+  });
+
+
   var marker5 = new google.maps.Marker({
     position: new google.maps.LatLng(-36.82621, -73.04934),
     map: map,
@@ -423,6 +441,22 @@ $scope.closeBeneficios = function(){
       new google.maps.Size(50, 50)
     ),
     title: 'Restaurant Mamut'
+  });
+
+  var contentString2 = '<div id="content">'+
+      '<h3>Restaurant Mamut</h3>'+
+      '<div id="bodyContent">'+
+      '<p>Servicio para comensales</p>'+
+      '<p>Peato Barros Arana 744-Concepcion</p>'+
+      '</div>'+
+      '</div>';  
+
+  var infowindow2 = new google.maps.InfoWindow({
+      content: contentString2
+  });
+  
+  google.maps.event.addListener(marker5, 'click', function() {
+    infowindow2.open(map,marker5);
   });
 
   var marker6 = new google.maps.Marker({
@@ -438,6 +472,22 @@ $scope.closeBeneficios = function(){
     title: 'Kayak Chinchorro'
   });
 
+  var contentString3 = '<div id="content">'+
+      '<h3>Kayak Chinchorro</h3>'+
+      '<div id="bodyContent">'+
+      '<p>Deporte aventura</p>'+
+      '<p>La ruta de los Chinchorros 456-Arica</p>'+
+      '</div>'+
+      '</div>';  
+
+  var infowindow3 = new google.maps.InfoWindow({
+      content: contentString3
+  });
+  
+  google.maps.event.addListener(marker6, 'click', function() {
+    infowindow3.open(map,marker6);
+  });
+
   var marker7 = new google.maps.Marker({
     position: new google.maps.LatLng(-53.15796, -70.90438),
     map: map,
@@ -449,6 +499,22 @@ $scope.closeBeneficios = function(){
       new google.maps.Size(50, 50)
     ),
     title: 'Restaurant Sabores'
+  });
+
+  var contentString4 = '<div id="content">'+
+      '<h3>Restaurant Sabores</h3>'+
+      '<div id="bodyContent">'+
+      '<p>Servicio para comensales</p>'+
+      '<p>Mejicana 702, 2do. Piso-Punta Arenas</p>'+
+      '</div>'+
+      '</div>';  
+
+  var infowindow4 = new google.maps.InfoWindow({
+      content: contentString4
+  });
+  
+  google.maps.event.addListener(marker7, 'click', function() {
+    infowindow4.open(map,marker7);
   });
 
   var marker8 = new google.maps.Marker({
@@ -464,6 +530,23 @@ $scope.closeBeneficios = function(){
     title: 'Hotel Quilquico'
   });
 
+  var contentString5 = '<div id="content">'+
+      '<h3>Hotel Quilquico</h3>'+
+      '<div id="bodyContent">'+
+      '<p>Servicio de alojamiento</p>'+
+      '<p>Peninsula de Rilan 657 - Castro</p>'+
+      '</div>'+
+      '</div>';  
+
+  var infowindow5 = new google.maps.InfoWindow({
+      content: contentString5
+  });
+  
+  google.maps.event.addListener(marker8, 'click', function() {
+    infowindow5.open(map,marker8);
+  });
+
+
   var marker9 = new google.maps.Marker({
     position: new google.maps.LatLng(-33.49437, -70.74822),
     map: map,
@@ -475,6 +558,22 @@ $scope.closeBeneficios = function(){
       new google.maps.Size(50, 50)
     ),
     title: 'Grand Hyatt'
+  });
+
+  var contentString6 = '<div id="content">'+
+      '<h3>Grand Hyatt</h3>'+
+      '<div id="bodyContent">'+
+      '<p>Servicio de alojamiento</p>'+
+      '<p> Kennedy Avenue 4601 - Santiago </p>'+
+      '</div>'+
+      '</div>';  
+
+  var infowindow6= new google.maps.InfoWindow({
+      content: contentString6
+  });
+  
+  google.maps.event.addListener(marker9, 'click', function() {
+    infowindow6.open(map,marker9);
   });
 
   var marker10 = new google.maps.Marker({
@@ -490,6 +589,22 @@ $scope.closeBeneficios = function(){
     title: 'Santiago Gourmet'
   });
 
+  var contentString7 = '<div id="content">'+
+      '<h3>Santiago Gourmet</h3>'+
+      '<div id="bodyContent">'+
+      '<p>Servicio para comensales</p>'+
+      '<p> Huérfanos 315-Santiago </p>'+
+      '</div>'+
+      '</div>';  
+
+  var infowindow7= new google.maps.InfoWindow({
+      content: contentString7
+  });
+  
+  google.maps.event.addListener(marker10, 'click', function() {
+    infowindow7.open(map,marker10);
+  });
+
   var marker11 = new google.maps.Marker({
     position: new google.maps.LatLng(-33.46214, -70.59407),
     map: map,
@@ -503,6 +618,22 @@ $scope.closeBeneficios = function(){
     title: 'Casa Muriel'
   });
 
+  var contentString8 = '<div id="content">'+
+      '<h3>Casa Muriel</h3>'+
+      '<div id="bodyContent">'+
+      '<p>Servicio de Alojamiento</p>'+
+      '<p>Dr Johow 657-Santiago </p>'+
+      '</div>'+
+      '</div>';  
+
+  var infowindow8= new google.maps.InfoWindow({
+      content: contentString8
+  });
+  
+  google.maps.event.addListener(marker11, 'click', function() {
+    infowindow8.open(map,marker11);
+  });
+
   var marker12 = new google.maps.Marker({
     position: new google.maps.LatLng(-33.48322, -70.53414),
     map: map,
@@ -514,6 +645,22 @@ $scope.closeBeneficios = function(){
       new google.maps.Size(50, 50)
     ),
     title: 'Antuperu'
+  });
+
+  var contentString9 = '<div id="content">'+
+      '<h3>Antuperu</h3>'+
+      '<div id="bodyContent">'+
+      '<p>Servicio para comensales</p>'+
+      '<p>Antupiren 768 - Santiago</p>'+
+      '</div>'+
+      '</div>';  
+
+  var infowindow9 = new google.maps.InfoWindow({
+      content: contentString9
+  });
+  
+  google.maps.event.addListener(marker12, 'click', function() {
+    infowindow9.open(map,marker12);
   });
 
   function UbicacionControl(controlDiv, map){
