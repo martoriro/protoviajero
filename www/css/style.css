@@ -82,3 +82,8 @@ a.item.selected{
 p {
 	text-align: justify;
 }
+
+.tabs {
+	background-color: rgb(255, 131, 40);
+	color: white;
+}
