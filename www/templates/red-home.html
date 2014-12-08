@@ -1,49 +1,79 @@
-<ion-view title="Alojamiento">
+<ion-view title="<img src='img/logoViajeroSide.png'>">
   <ion-content class="padding">
+
     <div class="list card">
-    	<div class="item item-avatar">
-    	    <img src="{{organizations.logo}}">
-    	    <h2>{{organizations.name}}</h2>
-    	    <p>
-            <!--{{organizations.calificacion}}-->
-            <i>Merced 504, Santiago</i>
-            <div class='ion-android-star' style="display: inline"></div>
-            <div class='ion-android-star' style="display: inline"></div>
-            <div class='ion-android-star' style="display: inline"></div>
-            <div class='ion-android-star' style="display: inline"></div>
-            </p>
-    	</div>
-        <div class="item item-divider">
-            <p>Servicio de {{organizations.servicioPrin}}
-        </div>
-    	<div class="item item-body">
-    		<div class="row">
-    			<!--Imagen principal de la organización-->                
-    			<div class="col col-50">
-                <center>
-    				<img src="{{organizations.imgOrganizacion[0]}}">
-                </center>
-    			</div>
-                <div class="col col-50">
-                <center>
-                    <img src="{{organizations.imgOrganizacion[1]}}">
-                </center>
-                </div>  			
-    		</div>
-    		<div class="row">
-    			<button class="button button-block button-positive" ng-click="construccion()">
-                    <i class= "icon ion-videocamera"></i>  Presentación
-                </button>
-    		</div>    		
-    	</div>    
-    	<div class="item item-body">
-    		<p>{{organizations.mensajePresentacion}}</p>
-    	</div>  
-        <div class="item item-divider">
-            <p>Además tenemos:</p>
-            <h3>{{organizations.serviciosSec[0]}}, {{organizations.serviciosSec[1]}}</h3>
-        </div> 
-        <br><br> 	
-	</div>
+
+      <div class="item item-avatar">
+        <img src="img/Red/avatar/martin.jpg">
+        <h2>Martin González</h2>
+        <p>Diciembre 10, 2014</p>
+      </div>
+
+      <div class="item item-body">
+        <img class="full-image" src="img/Red/lugares/torresPaine.jpg">
+        <h2>Viaje a Torres del Paine</h2>
+        <p> 
+            El mejor viaje que se puede realizar... Si pueden visiten Torres del Paine en un bonito y clásico lugar ;)
+        </p>
+        <p>
+          <a href="#" class="subdued">1 Like</a>
+          <a href="#" class="subdued">5 Comentarios</a>
+        </p>
+      </div>
+
+      <div class="item tabs tabs-secondary tabs-icon-left">
+        <a class="tab-item" href="#">
+          <i class="icon ion-thumbsup"></i>
+          Like
+        </a>
+        <a class="tab-item" href="#">
+          <i class="icon ion-chatbox"></i>
+          Comentarios
+        </a>
+        <a class="tab-item" href="#">
+          <i class="icon ion-eye"></i>
+            Ver
+        </a>
+      </div>
+
+    </div>
+
+    <div class="list card">
+
+      <div class="item item-avatar">
+        <img src="img/Red/avatar/jorge.jpg">
+        <h2>Jorge Figueroa</h2>
+        <p>Diciembre 01, 2014</p>
+      </div>
+
+      <div class="item item-body">
+        <img class="full-image" src="img/Red/lugares/desiertoAtacama.jpg">
+        <h2>Viaje a Desierto de Atacama</h2>
+        <p> 
+            El viaje al desierto es una experiencia única. Recomendado para autodescubrirse y darse cuenta de grandes realidades como que nunca le ganaré al tavo en el trote :'(
+        </p>
+        <p>
+          <a href="#" class="subdued">1 Like</a>
+          <a href="#" class="subdued">5 Comentarios</a>
+        </p>
+      </div>
+
+      <div class="item tabs tabs-secondary tabs-icon-left">
+        <a class="tab-item" href="#">
+          <i class="icon ion-thumbsup"></i>
+          Like
+        </a>
+        <a class="tab-item" href="#">
+          <i class="icon ion-chatbox"></i>
+          Comentarios
+        </a>
+        <a class="tab-item" href="#">
+          <i class="icon ion-eye"></i>
+            Ver
+        </a>
+      </div>
+
+    </div>
+
   </ion-content>
 </ion-view>
