@@ -237,7 +237,7 @@ $scope.closeBeneficios = function(){
 })
 
 /*Controladores del Mapa*/
-.controller("MapController", function($scope, $state, $rootScope){
+.controller("MapLogController", function($scope, $state, $rootScope){
 	var MY_MAPTYPE_ID = 'custom_style';
 
 	var featureOpts = [
@@ -276,6 +276,8 @@ $scope.closeBeneficios = function(){
   var options = {enableHighAccuracy: true};
 
   var myLocation;
+  var amigo1;
+  var amigo2;
 
   navigator.geolocation.getCurrentPosition(function(pos) {
       map.setCenter(new google.maps.LatLng(pos.coords.latitude, pos.coords.longitude));
@@ -291,6 +293,33 @@ $scope.closeBeneficios = function(){
           ),
           title: "Aquí"
       });
+  
+    amigo1 = new google.maps.Marker({
+      position: new google.maps.LatLng(pos.coords.latitude-0.00150, pos.coords.longitude-0.00450),
+      map: map,
+      icon:  new google.maps.MarkerImage(
+        'img/jorge.png',
+        new google.maps.Size(50, 50),
+        new google.maps.Point(0, 0),
+        null,
+        new google.maps.Size(50, 50)
+      ),
+      title: 'Amigo'
+    });
+
+    amigo2 = new google.maps.Marker({
+      position: new google.maps.LatLng(pos.coords.latitude+0.00477, pos.coords.longitude+0.00200),
+      map: map,
+      icon:  new google.maps.MarkerImage(
+        'img/joel.png',
+        new google.maps.Size(50, 50),
+        new google.maps.Point(0, 0),  
+        null,
+        new google.maps.Size(50, 50)
+      ),
+      title: 'Amigo'
+    });
+
   }, null, options);
 
   var map = new google.maps.Map(document.getElementById("map"), mapOptions);
@@ -313,6 +342,280 @@ $scope.closeBeneficios = function(){
     ),
     title: 'Hostal y apartamentos Andes'
 	});
+
+  var marker2 = new google.maps.Marker({
+    position: new google.maps.LatLng(-33.43733, -70.64186),
+    map: map,
+    icon:  new google.maps.MarkerImage(
+      'img/diner.png',
+      new google.maps.Size(50, 50),
+      new google.maps.Point(0, 0),
+      null,
+      new google.maps.Size(50, 50)
+    ),
+    title: 'Bombón oriental'
+  });
+
+  var marker3 = new google.maps.Marker({
+    position: new google.maps.LatLng(-33.58393, -70.39690),
+    map: map,
+    icon:  new google.maps.MarkerImage(
+      'img/adventure.png',
+      new google.maps.Size(50, 50),
+      new google.maps.Point(0, 0),
+      null,
+      new google.maps.Size(50, 50)
+    ),
+    title: 'Ruta vertical'
+  });
+
+  var marker4 = new google.maps.Marker({
+    position: new google.maps.LatLng(-29.90998, -71.27452),
+    map: map,
+    icon:  new google.maps.MarkerImage(
+      'img/lodgingOff.png',
+      new google.maps.Size(50, 50),
+      new google.maps.Point(0, 0),
+      null,
+      new google.maps.Size(50, 50)
+    ),
+    title: 'Hotel Club La Serena'
+  });
+
+  var marker5 = new google.maps.Marker({
+    position: new google.maps.LatLng(-36.82621, -73.04934),
+    map: map,
+    icon:  new google.maps.MarkerImage(
+      'img/dinerOff.png',
+      new google.maps.Size(50, 50),
+      new google.maps.Point(0, 0),
+      null,
+      new google.maps.Size(50, 50)
+    ),
+    title: 'Restaurant Mamut'
+  });
+
+  var marker6 = new google.maps.Marker({
+    position: new google.maps.LatLng(-18.45007, -70.29642),
+    map: map,
+    icon:  new google.maps.MarkerImage(
+      'img/adventureOff.png',
+      new google.maps.Size(50, 50),
+      new google.maps.Point(0, 0),
+      null,
+      new google.maps.Size(50, 50)
+    ),
+    title: 'Kayak Chinchorro'
+  });
+
+  var marker7 = new google.maps.Marker({
+    position: new google.maps.LatLng(-53.15796, -70.90438),
+    map: map,
+    icon:  new google.maps.MarkerImage(
+      'img/dinerOff.png',
+      new google.maps.Size(50, 50),
+      new google.maps.Point(0, 0),
+      null,
+      new google.maps.Size(50, 50)
+    ),
+    title: 'Restaurant Sabores'
+  });
+
+  var marker8 = new google.maps.Marker({
+    position: new google.maps.LatLng(-42.47953, -73.69667),
+    map: map,
+    icon:  new google.maps.MarkerImage(
+      'img/lodgingOff.png',
+      new google.maps.Size(50, 50),
+      new google.maps.Point(0, 0),
+      null,
+      new google.maps.Size(50, 50)
+    ),
+    title: 'Hotel Quilquico'
+  });
+
+  var marker9 = new google.maps.Marker({
+    position: new google.maps.LatLng(-33.49437, -70.74822),
+    map: map,
+    icon:  new google.maps.MarkerImage(
+      'img/lodgingOff.png',
+      new google.maps.Size(50, 50),
+      new google.maps.Point(0, 0),
+      null,
+      new google.maps.Size(50, 50)
+    ),
+    title: 'Grand Hyatt'
+  });
+
+  var marker10 = new google.maps.Marker({
+    position: new google.maps.LatLng(-33.44011, -70.65588),
+    map: map,
+    icon:  new google.maps.MarkerImage(
+      'img/dinerOff.png',
+      new google.maps.Size(50, 50),
+      new google.maps.Point(0, 0),
+      null,
+      new google.maps.Size(50, 50)
+    ),
+    title: 'Santiago Gourmet'
+  });
+
+  var marker11 = new google.maps.Marker({
+    position: new google.maps.LatLng(-33.46214, -70.59407),
+    map: map,
+    icon:  new google.maps.MarkerImage(
+      'img/lodgingOff.png',
+      new google.maps.Size(50, 50),
+      new google.maps.Point(0, 0),
+      null,
+      new google.maps.Size(50, 50)
+    ),
+    title: 'Casa Muriel'
+  });
+
+  var marker12 = new google.maps.Marker({
+    position: new google.maps.LatLng(-33.48322, -70.53414),
+    map: map,
+    icon:  new google.maps.MarkerImage(
+      'img/dinerOff.png',
+      new google.maps.Size(50, 50),
+      new google.maps.Point(0, 0),
+      null,
+      new google.maps.Size(50, 50)
+    ),
+    title: 'Antuperu'
+  });
+
+  function UbicacionControl(controlDiv, map){
+    controlDiv.style = 'margin: 25px; z-index: 99;';
+
+    var controlUI = document.createElement('div');
+    controlDiv.appendChild(controlUI);
+
+    // Set CSS for the control interior.
+    var imgButton = document.createElement('img');
+    imgButton.src = 'img/ubicame.png';
+    imgButton.height = '50';
+    imgButton.width = '50';
+    controlUI.appendChild(imgButton);
+
+    google.maps.event.addDomListener(controlUI, 'click', function() {
+      var options = {maximumAge: 3000, timeout: 5000, enableHighAccuracy: true};
+
+      navigator.geolocation.getCurrentPosition(function(pos) {
+          map.setCenter(new google.maps.LatLng(pos.coords.latitude, pos.coords.longitude));
+          myLocation.setPosition(new google.maps.LatLng(pos.coords.latitude, pos.coords.longitude));
+          amigo1.setPosition(new google.maps.LatLng(pos.coords.latitude-0.00300, pos.coords.longitude-0.00150));
+          amigo2.setPosition(new google.maps.LatLng(pos.coords.latitude+0.00477, pos.coords.longitude+0.00200));
+
+      });
+  });
+
+  }
+
+  var homeControlDiv = document.createElement('div');
+  var homeControl = new UbicacionControl(homeControlDiv, map);
+
+  homeControlDiv.index = 0;
+  map.controls[google.maps.ControlPosition.TOP_RIGHT].push(homeControlDiv);
+
+  google.maps.event.addListener(marker1, 'click', function(){
+    $state.go('alojamiento.home', {organizationId: 0})
+  });
+
+  google.maps.event.addListener(marker2, 'click', function(){
+    $state.go('restaurant.home', {organizationId: 0});
+  });
+
+  google.maps.event.addListener(marker3, 'click', function(){
+    $state.go('da.home', {organizationId: 0});
+  });
+
+google.maps.event.addListenerOnce(map, 'idle', function(){
+    navigator.splashscreen.hide();
+});
+
+map.mapTypes.set(MY_MAPTYPE_ID, customMapType);  
+
+})
+
+/*Controladores del Mapa*/
+.controller("MapController", function($scope, $state, $rootScope){
+  var MY_MAPTYPE_ID = 'custom_style';
+
+  var featureOpts = [
+  {
+    featureType: 'landscape.natural',
+    elementType: 'all',
+    stylers: [
+      { hue: '#fe974b' },
+      { visibility: 'simplified' },
+      { gamma: 0.5 },
+      { weight: 0.5 }
+    ]
+  },
+  {
+    featureType: 'poi',
+    elementType: 'all',
+    stylers: [
+      {visibility: "off"}
+    ]
+  }
+
+  ];
+
+  var mapOptions = {
+    center: new google.maps.LatLng(-33.4500, -70.6667),
+      zoom: 14,
+        mapTypeControlOptions: {
+        mapTypeIds: [google.maps.MapTypeId.ROADMAP, MY_MAPTYPE_ID]
+    },
+    mapTypeId: MY_MAPTYPE_ID,
+    disableDefaultUI: true,
+    zoomControl: true
+
+  };
+
+  var options = {enableHighAccuracy: true};
+
+  var myLocation;
+
+  navigator.geolocation.getCurrentPosition(function(pos) {
+      map.setCenter(new google.maps.LatLng(pos.coords.latitude, pos.coords.longitude));
+      myLocation = new google.maps.Marker({
+          position: new google.maps.LatLng(pos.coords.latitude, pos.coords.longitude),
+          map: map,
+          icon:  new google.maps.MarkerImage(
+            'img/yo.png',
+            new google.maps.Size(50, 50),
+            new google.maps.Point(0, 0),
+            null,
+            new google.maps.Size(50, 50)
+          ),
+          title: "Aquí"
+      });
+  }, null, options);
+
+  var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+
+  var styledMapOptions = {
+    name: 'Viajero'
+  };
+
+  var customMapType = new google.maps.StyledMapType(featureOpts, styledMapOptions);
+
+  var marker1 = new google.maps.Marker({
+    position: new google.maps.LatLng(-33.43663, -70.64445),
+    map: map,
+    icon:  new google.maps.MarkerImage(
+      'img/lodging.png',
+      new google.maps.Size(50, 50),
+      new google.maps.Point(0, 0),
+      null,
+      new google.maps.Size(50, 50)
+    ),
+    title: 'Hostal y apartamentos Andes'
+  });
 
   var marker2 = new google.maps.Marker({
     position: new google.maps.LatLng(-33.43733, -70.64186),
