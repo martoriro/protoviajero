@@ -225,6 +225,25 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
         }
       }
     })
+    
+    .state('red', {
+      url: "/red",
+      abstract: true,
+      templateUrl: "templates/red.html",
+      controller: 'RedCtrl'
+    })
+
+    // Each tab has its own nav history stack:
+
+    .state('red.home', {
+      url: '/home/:organizationId',
+      views: {
+        'red-home': {
+          templateUrl: 'templates/red-home.html',
+          controller: 'RedHomeCtrl'
+        }
+      }
+    })
     ;
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/app/home');

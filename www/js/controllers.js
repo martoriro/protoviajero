@@ -202,6 +202,10 @@ $scope.closeBeneficios = function(){
   console.log('hoa');
 })
 
+.controller('RedCtrl', function($scope, $stateParams) {
+})
+.controller('RedHomeCtrl', function($scope, $stateParams) {
+})
 /*Controladores del Mapa*/
 
 .controller("MapController", function($scope, $state, $rootScope){
