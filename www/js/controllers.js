@@ -214,12 +214,42 @@ $scope.closeBeneficios = function(){
 
 
 .controller('SearchCtrl', function($scope, $stateParams) {
-  console.log('hoa');
+  $ionicModal.fromTemplateUrl('templates/construccion.html', {
+    scope: $scope
+  }).then(function(modal) {
+    $scope.modalConstruccion = modal;
+  });
+
+  // Triggered in the login modal to close it
+  $scope.closeConstruccion = function() {
+    $scope.modalConstruccion.hide();
+  };
+
+  // Open the login modal
+  $scope.construccion = function() {
+    $scope.modalConstruccion.show();
+  };
 })
 
-.controller('RedCtrl', function($scope, $stateParams) {
+.controller('RedCtrl', function($scope, $ionicModal, $stateParams) {
+  $ionicModal.fromTemplateUrl('templates/construccion.html', {
+    scope: $scope
+  }).then(function(modal) {
+    $scope.modalConstruccion = modal;
+  });
+
+  // Triggered in the login modal to close it
+  $scope.closeConstruccion = function() {
+    $scope.modalConstruccion.hide();
+  };
+
+  // Open the login modal
+  $scope.construccion = function() {
+    $scope.modalConstruccion.show();
+  };
 
 })
+
 .controller('RedHomeCtrl', function($scope, $ionicModal, $stateParams) {
   $ionicModal.fromTemplateUrl('templates/buscador-amigos.html', {
     scope: $scope
