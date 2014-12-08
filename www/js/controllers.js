@@ -87,8 +87,28 @@ $scope.closeBeneficios = function(){
   $scope.organizations= Organizations.get($stateParams.organizationId);  
 })
 
-.controller('AlojamientoHomeCtrl', function($scope, $stateParams, Organizations) {
+.controller('AlojamientoHomeCtrl', function($scope, $stateParams, Organizations, $ionicModal, $timeout) {
   $scope.organizations= Organizations.get($stateParams.organizationId);
+
+  
+  // Create the login modal that we will use later
+  $ionicModal.fromTemplateUrl('templates/construccion.html', {
+    scope: $scope
+  }).then(function(modal) {
+    $scope.modalConstruccion = modal;
+  });
+
+  // Triggered in the login modal to close it
+  $scope.closeConstruccion = function() {
+    $scope.modalConstruccion.hide();
+  };
+
+  // Open the login modal
+  $scope.construccion = function() {
+    $scope.modalConstruccion.show();
+  };
+
+
 })
 
 .controller('AlojamientoContactoCtrl', function($scope, $stateParams, Contacts){
@@ -111,8 +131,23 @@ $scope.closeBeneficios = function(){
 
 })
 
-.controller('RestaurantHomeCtrl', function($scope, $stateParams) {
+.controller('RestaurantHomeCtrl', function($scope, $stateParams,$ionicModal, $timeout) {
+  // Create the login modal that we will use later
+  $ionicModal.fromTemplateUrl('templates/construccion.html', {
+    scope: $scope
+  }).then(function(modal) {
+    $scope.modalConstruccion = modal;
+  });
 
+  // Triggered in the login modal to close it
+  $scope.closeConstruccion = function() {
+    $scope.modalConstruccion.hide();
+  };
+
+  // Open the login modal
+  $scope.construccion = function() {
+    $scope.modalConstruccion.show();
+  };
 })
 
 .controller('RestaurantContactoCtrl', function($scope, $stateParams) {
@@ -132,8 +167,23 @@ $scope.closeBeneficios = function(){
 
 })
 
-.controller('DaHomeCtrl', function($scope, $stateParams) {
+.controller('DaHomeCtrl', function($scope, $stateParams,$ionicModal, $timeout) {
+  // Create the login modal that we will use later
+  $ionicModal.fromTemplateUrl('templates/construccion.html', {
+    scope: $scope
+  }).then(function(modal) {
+    $scope.modalConstruccion = modal;
+  });
 
+  // Triggered in the login modal to close it
+  $scope.closeConstruccion = function() {
+    $scope.modalConstruccion.hide();
+  };
+
+  // Open the login modal
+  $scope.construccion = function() {
+    $scope.modalConstruccion.show();
+  };
 })
 .controller('DaContactoCtrl', function($scope, $stateParams) {
 
