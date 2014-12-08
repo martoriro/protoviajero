@@ -1,34 +1,49 @@
-<!-- 
-  Create tabs with an icon and label, using the tabs-positive style. 
-  Each tab's child <ion-nav-view> directive will have its own 
-  navigation history that also transitions its views in and out.
--->
-<ion-nav-bar class="bar bar-header bar-energized">
-        <ion-nav-back-button class="button-icon icon ion-ios7-arrow-back">
-                Atrás
-        </ion-nav-back-button>
-        <ion-nav-buttons side="right">
-        <button class="button-icon ion-android-close" style="color: white" ui-sref="app.home">
-        </button>
- </ion-nav-buttons>
-</ion-nav-bar>
+<ion-side-menus>
 
-<ion-tabs class="tabs-icon-top">
-  <!-- Home -->
-  <ion-tab title="Inicio" icon="icon ion-home" href="red/home/0">
-    <ion-nav-view name="red-home"></ion-nav-view>
-  </ion-tab>
-  <!-- viaje -->
-  <ion-tab title="Viajes" icon="icon ion-briefcase" href="red/viajes/0">
-    <ion-nav-view name="red-viajes"></ion-nav-view>
-  </ion-tab>
-  <!-- mapa -->
-  <ion-tab title="Mapa" icon="icon icon ion-earth" href="red/mapa/0">
-    <ion-nav-view name="red-mapa"></ion-nav-view>
-  </ion-tab>
-  <!-- solicitudes -->
-  <ion-tab title="Solicitudes" icon="icon ion-network" href="red/solicitudes/0">
-    <ion-nav-view name="red-solicitudes"></ion-nav-view>
-  </ion-tab>
+  <ion-side-menu-content>
+    <ion-nav-bar class="bar bar-header bar-energized">      
+    </ion-nav-bar>
+    <ion-nav-view name="redContent" animation="slide-left"></ion-nav-view>
+  </ion-side-menu-content>
+
+  <ion-side-menu side="left">
+    <header class="bar bar-header bar-energized">
+      <h1 class="title">
+        <i  class="menuIzq icon ion-person"></i>
+        Juan Perez
+      </h1>
+    </header>
+
+    <ion-content class="has-header">
+      <div class="list menuIzquierdo">
+
+        <a class="item item-icon-left menu" menu-close ng-click="$state.go('red.home')">
+          <i class="menuIzq icon ion-home"></i>
+          Inicio
+        </a>
   
-</ion-tabs>
+        <a class="item item-icon-left menu" menu-close ng-click="$state.go('red.home')">
+          <i class="menuIzq icon ion-briefcase"></i>
+          Viajes
+        </a>
+  
+        <a class="item item-icon-left menu" menu-close ng-click="$state.go('red.home')">
+          <i class="menuIzq icon ion-network"></i>
+          Solicitudes
+        </a>
+        <!-- Navegación -->
+        <a class="item item-icon-left menu" menu-close ng-click="$state.go('red.home')">
+          <i class="menuIzq icon ion-earth"></i>
+          Navegación
+        </a>
+        <!-- Crear una Beneficios -->
+        <a class="item item-icon-left menu" menu-close ng-click="$state.go('app.home')">
+          <i class="menuIzq icon ion-log-out"></i>
+          Cerrar sesión
+        </a>
+      </div>
+
+
+    </ion-content>
+  </ion-side-menu>
+</ion-side-menus>

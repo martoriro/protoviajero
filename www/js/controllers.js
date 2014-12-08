@@ -218,11 +218,25 @@ $scope.closeBeneficios = function(){
 })
 
 .controller('RedCtrl', function($scope, $stateParams) {
-})
-.controller('RedHomeCtrl', function($scope, $stateParams) {
-})
-/*Controladores del Mapa*/
 
+})
+.controller('RedHomeCtrl', function($scope, $ionicModal, $stateParams) {
+  $ionicModal.fromTemplateUrl('templates/buscador-amigos.html', {
+    scope: $scope
+  }).then(function(modal) {
+    $scope.buscador = modal;
+  });
+
+  $scope.closeSearch = function(){
+    $scope.buscador.hide();
+  };
+
+  $scope.search = function() {
+    $scope.buscador.show();
+  };
+})
+
+/*Controladores del Mapa*/
 .controller("MapController", function($scope, $state, $rootScope){
 	var MY_MAPTYPE_ID = 'custom_style';
 

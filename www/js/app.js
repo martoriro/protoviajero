@@ -242,12 +242,10 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       controller: 'RedCtrl'
     })
 
-    // Each tab has its own nav history stack:
-
     .state('red.home', {
       url: '/home/:organizationId',
       views: {
-        'red-home': {
+        'redContent': {
           templateUrl: 'templates/red-home.html',
           controller: 'RedHomeCtrl'
         }
