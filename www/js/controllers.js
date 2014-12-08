@@ -148,6 +148,9 @@ $scope.closeBeneficios = function(){
 })
 
 
+.controller('SearchCtrl', function($scope, $stateParams) {
+  console.log('hoa');
+})
 
 /*Controladores del Mapa*/
 
