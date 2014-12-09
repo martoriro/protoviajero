@@ -1,3 +1,8 @@
+.tabs{
+	background-color: #FF8328 !important;
+	color: white;
+}
+
 button.ubicacion{
 	background: url('img/ubicame.png');
 }
